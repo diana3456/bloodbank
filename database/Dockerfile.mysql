@@ -1,0 +1,8 @@
+#menggunakan image resmi mysql 
+FROM mysql:8.0
+
+#mengatur variabel lingkungan
+ENV MYSQL_ROOT_PASSWORD diana
+
+#menyalin file SQL ke dalam container 
+COPY bloodbank_db.sql /docker-entrypoint-initdb.d/bloodbank_db.sql
